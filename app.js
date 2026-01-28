@@ -1,7 +1,6 @@
 if (process.env.NODE_ENV != "production") {
     require("dotenv").config();
 }
-console.log(process.env.SECRET);
 
 const express = require("express");
 const app = express();
@@ -39,7 +38,7 @@ store.on("error", () => {
 
 const sessionOptions = {
     store,
-    secret:  process.env.SECRET,
+    secret: process.env.SECRET,
     resave: false,
     saveUnintialized: true,
     cookie: {
@@ -100,26 +99,14 @@ app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
 
 
-// app.get("/testListing", async (req, res) => {
-//     let sampleListing = new Listing({
-//         title: "My New Villa",
-//         description: "By the Beach",
-//         price: 1200,
-//         location: "Calangute, Goa",
-//         country: "India",
-//     });
-//     await sampleListing.save();
-//     console.log("sample was saved");
-//     res.send("successful Testing...");
-// });
+
 app.all(/(.*)/, (req, res, next) => {
     next(new ExpressError(404, "Page not found!"));
 });
 app.use((err, req, res, next) => {
     let { status = 500, message = "Something went wrong!" } = err;
     res.status(status).render("listings/error.ejs", { message });
-    // res.status(status).send(message);
-    // res.send("Something went Wrong!");
+
 })
 
 app.listen(8080, () => {
