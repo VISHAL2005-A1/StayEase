@@ -7,10 +7,10 @@
 <div class="allcards">
 
     <% for(let listing of allListings) { %>
-        <div class="card " style="width: 25rem;">
+        <div class="card " >
             <a href="/listings/<%=listing._id%>">
 
-                <img width="100px" height="400px" src="<%=listing.image.url%>" class="card-img-top" alt="...">
+                <img  height="230px" src="<%=listing.image.url%>" class="card-img-top" alt="...">
             </a>
             <div class="card-body">
                 <p class="card-text"><b> <%=listing.title%></b></p>
