@@ -1,80 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scroll Navbar Example</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
   <!-- Navbar -->
   <nav id="navbar" class="navbar navbar-expand-md border-bottom">
     <div>
-        <div class="line-1">
-          <div class="logo ">
-           <svg  width="50" height="45" viewBox="0 0 1007 1080" style="display: block;"><path d="M949.278 666.715C875.957 506.859 795.615 344.664 713.713 184.809C698.893 155.177 670.813 98.2527 645.852 67.8412C609.971 24.1733 556.93 0.779785 503.109 0.779785C449.288 0.779785 396.247 24.1733 360.366 67.8412C335.406 98.2527 307.325 155.177 292.505 184.809C210.603 344.664 130.262 506.859 56.9404 666.715C47.5802 687.769 24.9598 737.675 16.3796 760.289C6.23941 787.581 0.779297 817.213 0.779297 846.845C0.779297 975.509 101.401 1079.22 235.564 1079.22C346.326 1079.22 434.468 1008.26 503.109 934.18C571.751 1008.26 659.892 1079.22 770.655 1079.22C904.817 1079.22 1006.22 975.509 1006.22 846.845C1006.22 817.213 999.979 787.581 989.839 760.289C981.259 737.675 958.638 687.769 949.278 666.715ZM503.109 810.195C447.728 738.455 396.247 649.56 396.247 577.819C396.247 506.079 446.948 470.209 503.109 470.209C559.27 470.209 610.751 508.419 610.751 577.819C610.751 647.22 558.49 738.455 503.109 810.195ZM770.655 998.902C688.628 998.902 618.271 941.557 555.955 872.656C620.205 792.541 691.093 679.121 691.093 577.819C691.093 458.513 598.271 389.892 503.109 389.892C407.947 389.892 315.906 458.513 315.906 577.819C315.906 679.098 386.294 792.478 450.318 872.593C387.995 941.526 317.614 998.902 235.564 998.902C146.642 998.902 81.1209 931.061 81.1209 846.845C81.1209 826.57 84.241 807.856 91.2611 788.361C98.2812 770.426 120.902 720.52 130.262 701.025C203.583 541.17 282.365 380.534 364.267 220.679C379.087 191.047 404.047 141.921 422.768 119.307C443.048 94.3538 471.129 81.0975 503.109 81.0975C535.09 81.0975 563.17 94.3538 583.451 119.307C602.171 141.921 627.132 191.047 641.952 220.679C723.854 380.534 802.635 541.17 875.957 701.025C885.317 720.52 907.937 770.426 914.957 788.361C921.978 807.856 925.878 826.57 925.878 846.845C925.878 931.061 859.576 998.902 770.655 998.902Z" fill="currentcolor"></path></svg>airbnb
-          </div>
-          <div class="nav-links">
-            <ul >
-              <li><a href="/listings">Homes</a></li>
-              <li><a href="#">Experiences</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="/listings/new">Add new Listings</a></li>
-            </ul>
-
-          </div>
-          <div class="userlog">
-           <% if(!currUser){%>
-            <a class="login-btn" href="/signup">signUp</a>
-            <a class="login-btn" href="/login">Login</a>
-          <%}%>
-          <%if(currUser){%>
-
-            <a class="login-btn" href="/logout">log out</a>
-            <%}%>
-          </div>
-
+      <div class="line-1">
+        <div class="logo ">
+          <img style="width: 55px;" src="/images/favicon.ico" alt="">
         </div>
-  
-        <div id="hidden" class="hidden">
-          
-          
-
-       <div class="hidden1">
-         <button class="btn">Anywhere</button>
-      
-
-         <button class="btn">Any time</button>
-      
-
-         <button class="btn">And guests</button>
-
-       </div>
-            
-
-          
-          
-            
+        <div class="nav-links">
+          <ul>
+            <li><a style="color: red;" href="/listings"> <svg style="color: red;" xmlns="http://www.w3.org/2000/svg"
+                  width="25" height="25" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+                  <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
+                </svg><br>Homes</a></li>
+            <li><a style="color: red;" href="#"><svg style="color: red;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5M9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8m1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5m-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96q.04-.245.04-.5M7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0" />
+                </svg><br>Experiences</a></li>
+            <li><a style="color: red;" href="#"> <svg style="color: red;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                  fill="currentColor" class="bi bi-layers-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882z" />
+                  <path
+                    d="m2.125 8.567-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0z" />
+                </svg><br>Services</a></li>
+            <li><a  style="color: red;" href="/listings/new"> <svg style="color:red" xmlns="http://www.w3.org/2000/svg"
+                  width="25" height="25" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+                </svg> <br>Add Listings</a></li>
           </ul>
-          
-          
-          
-          
-          
-
-          
 
         </div>
-     
-      <div id="nav_search_box"   class="nav_search_box">
-        <div class="highlight"></div>
-        <button class="btn text_start"><b>Where</b><p>Search destinations</p></button>
-        <button class="btn text_start "><b>Check in</b><p>Add dates</p></button>
-        <button class="btn text_start "><b>Check out</b><p>Add dates</p></button>
-        <button class="btn text_start "><b>Who</b><p>Add guests</p></button>
-        
+        <div class="userlog">
+          <% if(!currUser){%>
+            <a style="text-decoration: none ; color: red; margin: 15px; font-size: 18px;" href="/signup"><svg
+                style="color: red;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-person-circle " viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+              </svg> Sign up</a>
+            <a style="text-decoration: none ; color: red; margin: 15px; font-size: 18px;" href="/login"><svg
+                style="color: red;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+              </svg>
+              Log in</a>
+            <%}%>
+              <%if(currUser){%>
+
+                <a style="text-decoration: none ; color: red; margin: 15px; font-size: 18px;" href="/logout"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                  </svg>Log out</a>
+                <%}%>
+        </div>
+
       </div>
-       
+
+      <div id="hidden" class="hidden">
+
+
+
+        <div class="hidden1">
+          <button class="btn">Anywhere</button>
+
+
+          <button class="btn">Any time</button>
+
+
+          <button class="btn">And guests</button>
+
+        </div>
+
+      </div>
+
+      <div id="nav_search_box" class="nav_search_box">
+        <div class="highlight"></div>
+        <button class="btn text_start"><b>Where</b>
+          <p>Search destinations</p>
+        </button>
+        <button class="btn text_start "><b>Check in</b>
+          <p>Add dates</p>
+        </button>
+        <button class="btn text_start "><b>Check out</b>
+          <p>Add dates</p>
+        </button>
+        <button class="btn text_start "><b>Who</b>
+          <p>Add guests</p>
+        </button>
+
+      </div>
+
     </div>
   </nav>
 
@@ -87,4 +120,5 @@
 
   <script src="/css/script.js"></script>
 </body>
+
 </html>

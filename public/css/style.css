@@ -1,6 +1,5 @@
 
 
-
 .container{
   flex: 1;
   position: relative;
@@ -324,6 +323,71 @@ div.reserve{
 }
 
 
+/*footer*/
+
+.airbnb-footer {
+  background-color: #f7f7f7;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+  position: relative;
+  bottom: -900px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 18px;
+  color: #555;
+}
+
+.social-icons a:hover {
+  color: #ff385c;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+
+
 @media (max-width: 770px)  {
 
   /* Stack navbar */
@@ -333,11 +397,14 @@ div.reserve{
     gap: 14px;
     padding: 12px 16px;
   }
+  .airbnb-footer{
+    bottom: -670px;
+  }
 
   /* Hide menu links */
   .nav-links {
    position: relative;
-   top: 50px;
+   top: 10px;
    display: flex;
    align-items: center;
    justify-content:space-around;
@@ -361,7 +428,7 @@ div.reserve{
 
 }
 .navbar{
-  height: 180px;
+  height: 150px;
 }
 .nav_search_box p{
   display: none;
@@ -372,8 +439,8 @@ div.reserve{
  
 }
 .hidden .hidden1{
- left: 19%;
- width:265px;
+ left:5%;
+ width:365px;
 }
 
 .hidden button{
@@ -381,7 +448,7 @@ div.reserve{
   font-size: 10px;
 }
 .navbar.navbar.scrolled{
-  height: 140px;
+  height: 100px;
 }
 .allcards{
   display: grid;
