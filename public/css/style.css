@@ -1,13 +1,24 @@
 
 
 .container{
-  flex: 1;
-  position: relative;
-  top: 4vh;
-  
+  top: 0 !important;
+  /* padding-top: 140px; */
+}
+
+
+.sticky-top{
+  position: static!important;
+}
+.cardimg{
+  display: flex !important;
+  justify-content: center !important;
 }
 .cardimg img{
-  border-radius: 15px !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  height: 420px !important;
+  object-fit: cover !important;
+  left: 0 !important;
 }
 .line{
   width: 100%;
@@ -15,45 +26,36 @@
   background-color: cadetblue;
 }
 .price-box{
-  background-color: rgb(253, 253, 253);
-  width: 40%;
-  height: 40vh;
-  left: 44%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 0px 40px   rgba(0,0,0,0.2);
-  border-radius: 15px;
-  padding: 25px 25px 0px;
-  position: sticky;
-  /* bottom: 20px; */
-  
-  
+  width: 100% !important;
+  max-width: 380px !important;
+  height: auto !important;
+  left: 0 !important;
+  margin: auto !important;
+  padding: 24px !important;
+  gap: 1rem !important;
+  position: sticky !important;
+  top: 120px !important;
+}
+.check{
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto auto auto !important;
+  gap: 10px !important;
 }
 .check .item-3{
-display: flex;
-gap: 15rem;
-align-items: center;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 1rem !important;
 }
 #arrow{
   width: 20px;
 }
 #dropcontent{
-  position: absolute;
-  top: 230px;
- left: 50px;
- border-radius: 15px;
- background-color: rgb(253, 253, 253);
-  height: 55vh;
- box-shadow: 0 0px 30px   rgba(0,0,0,0.1);
-  overflow-y: scroll;
-  overflow-x: hidden;
-  width: 17vw;
-  margin: auto;
-  scrollbar-width: none;
-  
- 
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+  width: 100% !important;
+  max-width: 300px !important;
+  top: 100% !important;
 }
 
 
@@ -256,7 +258,7 @@ div.reserve{
   /* flex-direction: column; */
   justify-content: space-between;
   align-items: start;
-  /* padding: 40px 50px; */
+  padding: 40px 50px;
   transition: all 0.3s ease-in;
   z-index: 10;
   background: rgb(246, 246, 246);
@@ -330,6 +332,10 @@ div.reserve{
 .login-btn:hover {
   background: #e60050;
 }
+.img-fluid {
+    width: 100%;
+    height: 550px;
+}
 
 /* Page Content */
 
@@ -346,7 +352,8 @@ div.reserve{
   padding: 40px 20px 20px;
   font-family: Arial, sans-serif;
   position: relative;
-  bottom: -900px;
+  bottom: 0px;
+  margin: 455px 10px 0px 10px;
 }
 
 .footer-container {
@@ -392,6 +399,14 @@ div.reserve{
 .social-icons a:hover {
   color: #ff385c;
 }
+h2, i, strong{
+  text-align: center !important;
+  display: block !important;
+}
+.row .card{
+  border-radius: 18px !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+}
 
 .footer-bottom {
   border-top: 1px solid #ddd;
@@ -402,29 +417,114 @@ div.reserve{
   color: #555;
 }
 
+/* ===== SHARED CARD STYLE ===== */
+.listing-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  min-width: 260px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.listing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.listing-card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 12px;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price-text {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ===== HORIZONTAL SCROLL ===== */
+.horizontal-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.horizontal-scroll .listing-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* ===== VERTICAL GRID ===== */
+.vertical-grid {
+  margin-bottom: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .listing-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .listing-card {
+    min-width: 220px;
+  }
+
+  .listing-card img {
+    height: 180px;
+  }
+}
+
+
 
 @media (max-width: 770px)  {
-  .cardimg img{
-    width: 100vw;
-    height: 22rem;
-    position:relative;
-    left: -88px;
-    
+   .cardimg img{
+    height: 260px !important;
   }
-  .container{
-    overflow-x: hidden !important;
-    top: -5vh;
-  }
+  .img-fluid {
+    width: 100%;
+    height: 300px;
+}
   
+ 
    
   .price-box{
-    width: 71%;
-    height: 24vh;
-    left: 24%;
-    font-size: 11px;
+    position: relative !important;
+    top: 0 !important;
+    max-width: 95% !important;
   }
-  .price-box button{
-    width: 150px !important;
+ .price-box button{
+  width: 100% !important;
+  height: 60px !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+}
+h2, i, strong{
+    text-align: left !important;
   }
   
   .line-1 {
@@ -433,9 +533,9 @@ div.reserve{
     gap: 14px;
     padding: 12px 16px;
   }
-  .airbnb-footer{
-    bottom: -670px;
-  }
+  /* .airbnb-footer{
+    bottom: -12px;
+  } */
 
   /* Hide menu links */
   .nav-links {
@@ -484,7 +584,7 @@ div.reserve{
   display: grid;
   grid-template-columns: 1fr;
    position: relative;
-   /* bottom: 150px; */
+   bottom: 12px;
   justify-items: center;
   align-items: center;
   height: 100%;
