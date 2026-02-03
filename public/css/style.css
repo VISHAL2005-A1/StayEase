@@ -3,7 +3,8 @@
 .container{
   flex: 1;
   position: relative;
-  top: 15vh;
+  top: 4vh;
+  
 }
 .cardimg img{
   border-radius: 15px !important;
@@ -130,9 +131,10 @@ div.reserve{
   position: relative;
   background: transparent;
   z-index: 2;
-  padding: 15px;
-  border-radius: 100px;
+  padding: 5px;
+  /* border-radius: 100px; */
   transition: all 0.5s;
+  font-size: 13px;
   border: none;
 
 }
@@ -174,7 +176,7 @@ div.reserve{
 .line-1 {
   display: flex;
   position: absolute;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: auto;
   width: 100%;
@@ -191,35 +193,47 @@ div.reserve{
 .nav_search_box {
   border: 1px solid rgba(178, 170, 170, 0.705);
   border-radius: 100px;
-  width: 60%;
+  width: 55%;
+ 
   /* margin: auto !; */
   display: grid;
-  top: 150px;
+  top: 100px;
   left: 22%;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   align-items: center;
+  justify-content: center;
   position: absolute;
   transition: all 0.45s;
   background-color: white;
   /* top: 30px; */
   box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
 }
+.hidden{
+  /* position: relative; */
+  width: 100vw;
+  padding: 0;
+ 
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+/* background-color: #9f4766 !important; */
+  margin: auto !important;
+}
 
 .hidden1 {
   border: 1px solid rgba(178, 170, 170, 0.705);
   border-radius: 100px;
-  width: 450px;
-  margin: auto;
-  position: absolute;
+  width: 400px;
+  position: relative;
+  left: -49px;
+  margin: auto !important;
   display: grid;
-  /* height: 70px; */
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  /* position: relative; */
   transition: all 0.4s ease-in;
   background-color: white;
-  left: 36%;
-  top: 30px;
   box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
 }
 
@@ -242,7 +256,7 @@ div.reserve{
   /* flex-direction: column; */
   justify-content: space-between;
   align-items: start;
-  padding: 40px 50px;
+  /* padding: 40px 50px; */
   transition: all 0.3s ease-in;
   z-index: 10;
   background: rgb(246, 246, 246);
@@ -282,11 +296,13 @@ div.reserve{
 }
 .nav-links{
   transition: all 0.3s ease;
+  position: relative;
+  left: 35px;
 }
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 40px;
 }
 
 .navbar ul li a {
@@ -387,10 +403,30 @@ div.reserve{
 }
 
 
-
 @media (max-width: 770px)  {
-
-  /* Stack navbar */
+  .cardimg img{
+    width: 100vw;
+    height: 22rem;
+    position:relative;
+    left: -88px;
+    
+  }
+  .container{
+    overflow-x: hidden !important;
+    top: -5vh;
+  }
+  
+   
+  .price-box{
+    width: 71%;
+    height: 24vh;
+    left: 24%;
+    font-size: 11px;
+  }
+  .price-box button{
+    width: 150px !important;
+  }
+  
   .line-1 {
     flex-direction: column;
     align-items: flex-start;
@@ -405,6 +441,7 @@ div.reserve{
   .nav-links {
    position: relative;
    top: 10px;
+   left: 0px;
    display: flex;
    align-items: center;
    justify-content:space-around;
@@ -433,15 +470,8 @@ div.reserve{
 .nav_search_box p{
   display: none;
 }
-.hidden{
- 
- margin: auto;
- 
-}
-.hidden .hidden1{
- left:5%;
- width:365px;
-}
+
+
 
 .hidden button{
   
@@ -454,7 +484,7 @@ div.reserve{
   display: grid;
   grid-template-columns: 1fr;
    position: relative;
-   bottom: 150px;
+   /* bottom: 150px; */
   justify-items: center;
   align-items: center;
   height: 100%;
@@ -493,10 +523,12 @@ div.reserve{
     grid-template-columns: 0.5fr 0.5fr ;
     /* gap: 5px; */
   }
-  .hidden .hidden1{
-    /* width: 30%; */
-    width: 300px;
+  .row{
+    top: -100px !important;
   }
+  /* .hidden .hidden1{
+    width: 300px;
+  } */
   .hidden button{
     font-size: 10px;
   }
@@ -504,6 +536,13 @@ div.reserve{
 @media (min-width:990px) and (max-width:1400px){
   .allcards{
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  /* .hidden .hidden1{
+    
+    width: 300px;
+  } */
+  .row{
+    top: -100px !important;
   }
 }
 
