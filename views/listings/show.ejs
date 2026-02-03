@@ -115,7 +115,7 @@
   <!-- Reviews -->
   <div class="row g-3 mt-4">
 
-    <% for(review of listing.reviews){ %>
+<% for(review of listing.reviews){ %>
     <div class="col-lg-6 col-md-6 col-12">
       <div class="card border-0 shadow-sm rounded-4 p-3 h-100 review-card">
 
@@ -124,15 +124,16 @@
         <p class="starability-result mb-2" data-rating="<%= review.rating %>"></p>
 
         <p class="text-muted mb-2"><%=review.comment%></p>
-         <%if(currUser && listing.owner._id.equals(currUser._id)){%>}
+        <%if(currUser && listing.owner._id.equals(currUser._id)){%>
         <form method="POST"
           action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE">
           <button class="badge text-bg-secondary">Delete</button>
-        </form><%}%>
+        </form>
+        <%}%>
 
-      </div>
     </div>
-    <% } %>
+    <%}%>
+</div>
 
   </div>
 </div>
