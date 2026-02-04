@@ -307,6 +307,7 @@ div.reserve{
   gap: 40px;
 }
 
+
 .navbar ul li a {
   text-decoration: none;
   font-size: 16px;
@@ -406,7 +407,14 @@ h2, i, strong{
 .row .card{
   border-radius: 18px !important;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+
+    font-size: 15px;
+    height: 300px !important;
+    margin: 15px;
+  width: 340px;
+  
 }
+
 
 .footer-bottom {
   border-top: 1px solid #ddd;
@@ -481,6 +489,7 @@ h2, i, strong{
 .vertical-grid {
   margin-bottom: 40px;
 }
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
@@ -591,6 +600,11 @@ h2, i, strong{
   
  
 }
+.vertical-grid {
+    margin-bottom: 40px;
+    position: relative;
+    gap: 14px;
+}
 
 /* .allcards .card{
   width:25 ;
@@ -617,6 +631,7 @@ h2, i, strong{
     align-items: center;
     z-index: 1000;
   }
+  
 }
 @media (min-width:770px) and (max-width:990px){
   .allcards{
@@ -628,12 +643,17 @@ h2, i, strong{
   }
   /* .hidden .hidden1{
     width: 300px;
-  } */
-  .hidden button{
-    font-size: 10px;
-  }
+    } */
+    .hidden button{
+      font-size: 10px;
+    }
+    .vertical-grid {
+      margin-bottom: 40px;
+      position: relative;
+      gap: 154px;
+    }
 }
-@media (min-width:990px) and (max-width:1400px){
+@media (min-width:990px) and (max-width:2500px){
   .allcards{
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -641,9 +661,16 @@ h2, i, strong{
     
     width: 300px;
   } */
-  .row{
-    top: -100px !important;
+  .container{
+    width: 100vw;
   }
+  .vertical-grid {
+    margin-bottom: 40px;
+    position: relative;
+    gap:129px;
+}
+
+  
 }
 
 

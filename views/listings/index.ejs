@@ -5,7 +5,7 @@
 
   <!-- HORIZONTAL SCROLL SECTION -->
   <h4 class="mb-3">Featured Listings</h4>
-  <div class="horizontal-scroll">
+  <div style="scrollbar-width: none;" class="horizontal-scroll">
     <% for(let listing of allListings) { %>
       <div class="card listing-card">
         <a href="/listings/<%=listing._id%>">
@@ -21,7 +21,7 @@
 
   <!-- VERTICAL GRID SECTION -->
   <h4 class="mt-5 mb-3">All Listings</h4>
-  <div class="row g-4 vertical-grid">
+  <div  class="row g-4 vertical-grid">
     <% for(let listing of allListings) { %>
       <div class="col-lg-3 col-md-4 col-sm-6 col-12">
         <div class="card listing-card h-100">

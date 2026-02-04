@@ -5,7 +5,7 @@ const reviewSchema=new Schema({
     comment:String,
     rating:{
         type:Number,
-        min:1,
+   
         max:5,
     },
     createdAt:{
@@ -15,6 +15,13 @@ const reviewSchema=new Schema({
     author:{
          type:Schema.Types.ObjectId,
         ref:"User",
+    },
+    image: {
+
+        url: String,
+        filename: String,
+
+       
     }
 });
 
