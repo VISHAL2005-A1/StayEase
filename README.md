@@ -1,4 +1,4 @@
-# 🏠 StayEasy – Secure Accommodation Booking Platform
+# 🏠 StayEase – Secure Accommodation Booking Platform
 
 A full-stack web application that allows users to list, browse, and book accommodations securely. Built with the MERN-adjacent stack using Node.js, Express.js, MongoDB, and Passport.js.
 
