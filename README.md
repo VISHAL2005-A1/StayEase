@@ -98,7 +98,7 @@ To run this project in your local environment, follow these steps:
 
 2. Navigate into the project directory:
    ```bash
-   cd StayEasy
+   cd StayEase
    ```
 
 3. Install the required dependencies:
